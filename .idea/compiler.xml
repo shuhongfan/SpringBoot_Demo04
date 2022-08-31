@@ -3,6 +3,27 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sg-02-SpringBoot-Static" />
+        <module name="sg-01-SpringBoot-QuickStart" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sg-01-SpringBoot-QuickStart" target="1.8" />
+      <module name="sg-02-SpringBoot-Static" target="1.8" />
+      <module name="sg-03-SpringBoot-Web" target="1.8" />
+      <module name="spring-source" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sg-01-SpringBoot-QuickStart" options="-parameters" />
+      <module name="sg-02-SpringBoot-Static" options="-parameters" />
+      <module name="sg-03-SpringBoot-Web" options="-parameters" />
+      <module name="spring-source" options="-parameters" />
+    </option>
   </component>
 </project>

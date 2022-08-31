@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    static-path-pattern: /res/**
+  web:
+    resources:
+      static-locations:
+        - classpath:/sgstatic/
+        - classpath:/static/
+  aop:
+    auto: false
+  profiles:
+    active: dev
+debug: true #开启日志
+logging:
+  level:
+    com.sangeng: debug #设置日志级别
+management:
+  endpoints:
+    enabled-by-default: true #配置启用所有端点
+  web:
+    exposure:
+      include: "*" #web端暴露所有端点

@@ -32,7 +32,6 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-12345
 ```
 
 ②触发热部署
@@ -60,7 +59,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-1234
 ```
 
 #### ②编写测试类
@@ -83,7 +81,6 @@ public class ApplicationTest {
         System.out.println(helloController);
     }
 }
-1234567891011121314151617
 ```
 
 **注意：测试类所在的包需要和启动类是在同一个包下。否则就要使用如下写法指定启动类。**
@@ -107,8 +104,6 @@ public class ApplicationTest {
         System.out.println(helloController);
     }
 }
-
-12345678910111213141516171819
 ```
 
 ### 2.2 兼容老版本
@@ -137,7 +132,6 @@ public class ApplicationTest {
             <artifactId>junit-vintage-engine</artifactId>
             <scope>test</scope>
         </dependency>
-12345
 ```
 
 **注意：**
@@ -169,7 +163,6 @@ public class ApplicationTest {
         System.out.println(helloController);
     }
 }
-12345678910111213141516171819202122
 ```
 
 ## 3.整合mybatis
@@ -197,8 +190,6 @@ insert  into `user`(`id`,`username`,`age`,`address`) values (2,'pdd',25,'上海'
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
-12345678910111213141516171819
 ```
 
 ②实体类
@@ -218,7 +209,6 @@ public class User {
     private String address;
 }
 
-1234567891011121314
 ```
 
 ### 3.2 整合步骤
@@ -240,7 +230,6 @@ public class User {
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-123456789101112
 ```
 
 #### ②配置数据库信息
@@ -252,7 +241,6 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-123456
 ```
 
 #### ③配置mybatis相关配置
@@ -262,7 +250,6 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml # mapper映射文件路径
   type-aliases-package: com.sangeng.domain   # 配置哪个包下的类有默认的别名
 
-1234
 ```
 
 #### ④编写Mapper接口
@@ -276,7 +263,6 @@ public interface UserMapper {
     public List<User> findAll();
 }
 
-123456
 ```
 
 #### ⑤编写mapper接口对应的[xml](https://so.csdn.net/so/search?q=xml&spm=1001.2101.3001.7020)文件
@@ -289,7 +275,6 @@ public interface UserMapper {
         select * from user
     </select>
 </mapper>
-1234567
 ```
 
 #### ⑥测试
@@ -307,7 +292,6 @@ public class SpringMyTest {
         System.out.println(userMapper.findAll());
     }
 }
-123456789101112
 ```
 
 ## 4.Web开发
@@ -338,7 +322,6 @@ public class SpringMyTest {
 spring:
   mvc:
     static-path-pattern: /res/** #修改静态资源访问路径
-123
 ```
 
 #### 4.1.2 修改静态资源存放目录
@@ -354,7 +337,6 @@ spring:
       static-locations:
         - classpath:/sgstatic/ 
         - classpath:/static/
-123456
 ```
 
 ### 4.2 设置请求映射规则@RequestMapping
@@ -382,7 +364,7 @@ public class HelloController {
         return "testPath";
     }
 }
-12345678
+
 @RestController
 public class HelloController {
 
@@ -391,7 +373,6 @@ public class HelloController {
         return "testPath";
     }
 }
-123456789
 ```
 
 #### 4.2.2 指定请求方式
@@ -414,7 +395,6 @@ public class TestController {
     }
 }
 
-1234567891011
 ```
 
 注意：我们可以也可以运用如下注解来进行替换
@@ -439,7 +419,6 @@ public class TestController {
         return "testMethod";
     }
 }
-12345678910
 ```
 
 #### 4.2.3 指定请求参数
@@ -460,7 +439,6 @@ public class TestController {
         return "testParams";
     }
 }
-123456789
 ```
 
 
@@ -477,7 +455,6 @@ public class TestController {
         return "testParams";
     }
 }
-123456789
 ```
 
 
@@ -494,7 +471,6 @@ public class TestController {
         return "testParams";
     }
 }
-123456789
 ```
 
  如果要求有code这参数，并且这参数值必须**不是某个值**可以改成如下形式
@@ -509,7 +485,6 @@ public class TestController {
         return "testParams";
     }
 }
-123456789
 ```
 
 #### 4.2.4 指定请求头
@@ -531,7 +506,6 @@ public class TestController {
         return "testHeaders";
     }
 }
-12345678910
 ```
 
  如果是要求不能有**deviceType**这个请求头可以把改成如下形式
@@ -547,7 +521,6 @@ public class TestController {
         return "testHeaders";
     }
 }
-12345678910
 ```
 
  如果要求有deviceType这个请求头，并且其值必须**是某个值**可以改成如下形式
@@ -563,7 +536,6 @@ public class TestController {
         return "testHeaders";
     }
 }
-12345678910
 ```
 
  如果要求有deviceType这个请求头，并且其值必须**不是某个值**可以改成如下形式
@@ -579,7 +551,6 @@ public class TestController {
         return "testHeaders";
     }
 }
-12345678910
 ```
 
 #### 4.2.5 指定请求头Content-Type
@@ -596,7 +567,6 @@ public class TestController {
         System.out.println("testConsumes处理了请求");
         return "testConsumes";
     }
-12345
 ```
 
 ##### 范例二
@@ -609,7 +579,6 @@ public class TestController {
         System.out.println("testConsumes处理了请求");
         return "testConsumes";
     }
-12345
 ```
 
 ### 4.3 获取请求参数
@@ -639,7 +608,6 @@ public class UserController {
         return "findUserById";
     }
 }
-12345678910
 ```
 
 ##### 范例二
@@ -661,8 +629,6 @@ public class UserController {
         return "findUser";
     }
 }
-
-1234567891011
 ```
 
 #### 4.3.2 获取请求体中的Json格式参数
@@ -684,7 +650,6 @@ public class UserController {
 
 ```json
 {"name":"三更","age":15}
-1
 ```
 
 
@@ -703,7 +668,6 @@ public class UserController {
         return "insertUser";
     }
 }
-123456789
 ```
 
  User实体类如下：
@@ -717,8 +681,6 @@ public class User {
     private String name;
     private Integer age;
 }
-
-123456789
 ```
 
 
@@ -734,7 +696,6 @@ public class User {
         System.out.println(map);
         return "insertUser";
     }
-123456
 ```
 
 ###### 范例二
@@ -743,7 +704,6 @@ public class User {
 
 ```java
 [{"name":"三更1","age":14},{"name":"三更2","age":15},{"name":"三更3","age":16}]
-1
 ```
 
  方法定义：
@@ -755,7 +715,6 @@ public class User {
         System.out.println(users);
         return "insertUser";
     }
-123456
 ```
 
 ##### 4.3.2.3 注意事项
@@ -782,29 +741,26 @@ public class User {
 
 ```java
     @RequestMapping("/testRquestParam")
-    public String testRquestParam(Integer id, String name, String[] likes){
+    public String testRequestParam(Integer id, String name, String[] likes){
         System.out.println("testRquestParam");
         System.out.println(id);
         System.out.println(name);
         System.out.println(Arrays.toString(likes));
         return "testRquestParam";
     }
-
-123456789
 ```
 
  如果方法参数名和请求参数名不一致，我们可以加上**@RequestParam**注解例如：
 
 ```java
     @RequestMapping("/testRquestParam")
-    public String testRquestParam(@RequestParam("id") Integer uid,@RequestParam("name") String name, @RequestParam("likes")String[] likes){
+    public String testRequestParam(@RequestParam("id") Integer uid,@RequestParam("name") String name, @RequestParam("likes")String[] likes){
         System.out.println("testRquestParam");
         System.out.println(uid);
         System.out.println(name);
         System.out.println(Arrays.toString(likes));
         return "testRquestParam";
     }
-12345678
 ```
 
 2.获取参数封装成实体对象
@@ -813,12 +769,11 @@ public class User {
 
 ```java
     @RequestMapping("/testRquestParam")
-    public String testRquestParam(User user){
+    public String testRequestParam(User user){
         System.out.println("testRquestParam");
         System.out.println(user);
         return "testRquestParam";
     }
-123456
 ```
 
  User类定义如下：
@@ -833,14 +788,12 @@ public class User {
     private Integer age;
     private String[] likes;
 }
-123456789
 ```
 
  测试时请求url如下：
 
 ```java
 http://localhost:8080/testRquestParam?id=1&name=三更草堂&likes=编程&likes=录课&likes=烫头
-1
 ```
 
  **注意：实体类中的成员变量要和请求参数名对应上。并且要提供对应的set/get方法。**
@@ -864,7 +817,6 @@ http://localhost:8080/testRquestParam?id=1&name=三更草堂&likes=编程&likes=
         System.out.println(Arrays.toString(likes));
         return "testRquestParam";
     }
-12345678
 ```
 
 ##### 4.3.4.2 defaultValue
@@ -882,7 +834,6 @@ http://localhost:8080/testRquestParam?id=1&name=三更草堂&likes=编程&likes=
         System.out.println(Arrays.toString(likes));
         return "testRquestParam";
     }
-12345678
 ```
 
 ### 4.4 响应体响应数据
@@ -929,7 +880,6 @@ public class ResponseController {
         return user;
     }
 }
-1234567891011
 ```
 
 ### 4.5 跨域请求
@@ -969,8 +919,6 @@ public class UserController {
         return new ResponseResult(200,users);
     }
 }
-
-1234567891011121314151617
 ```
 
 ##### 2.使用 WebMvcConfigurer 的 addCorsMappings 方法配置CorsInterceptor
@@ -995,7 +943,6 @@ public class CorsConfig implements WebMvcConfigurer {
                 .maxAge(3600);
     }
 }
-12345678910111213141516171819
 ```
 
 ### 4.6 拦截器
@@ -1026,7 +973,6 @@ public class CorsConfig implements WebMvcConfigurer {
             <artifactId>jjwt</artifactId>
             <version>0.9.0</version>
         </dependency>
-12345
 ```
 
  然后可以使用下面的工具类来生成和解析token
@@ -1109,7 +1055,6 @@ public class JwtUtil {
 
 
 }
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677
 ```
 
 ##### 4.6.0.3 登录接口实现
@@ -1128,9 +1073,6 @@ CREATE TABLE `sys_user` (
 /*Data for the table `sys_user` */
 
 insert  into `sys_user`(`id`,`username`,`password`) values (1,'root','root'),(2,'sangeng','caotang');
-
-
-12345678910111213
 ```
 
 实体类
@@ -1145,8 +1087,6 @@ public class SystemUser {
     private String username;
     private String password;
 }
-
-12345678910
 ```
 
 SystemUserController
@@ -1189,8 +1129,6 @@ public class SystemUserController {
         return new ResponseResult(200, "登录成功", map);
     }
 }
-
-1234567891011121314151617181920212223242526272829303132333435363738
 ```
 
 Service
@@ -1211,7 +1149,6 @@ public class SystemUserServcieImpl implements SystemUserService {
         return loginUser;
     }
 }
-123456789101112131415
 ```
 
 dao
@@ -1223,7 +1160,6 @@ public interface UserMapper {
     List<User> findAll();
 }
 
-123456
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sangeng.mapper.SystemUserMapper">
@@ -1231,7 +1167,6 @@ public interface UserMapper {
         select * from sys_user where username = #{username} and password = #{password}
     </select>
 </mapper>
-1234567
 ```
 
 ##### 4.6.0.4 登录页面
@@ -1251,7 +1186,6 @@ public interface UserMapper {
 ```java
 public class LoginInterceptor implements HandlerInterceptor {
 }
-12
 ```
 
 ##### ②实现方法
@@ -1284,7 +1218,6 @@ public class LoginInterceptor implements HandlerInterceptor {
         return true;
     }
 }
-123456789101112131415161718192021222324252627
 ```
 
 ##### ③配置拦截器
@@ -1303,7 +1236,6 @@ public class LoginConfig implements WebMvcConfigurer {
             .excludePathPatterns("/sys_user/login");//配置排除路径
     }
 }
-12345678910111213
 ```
 
 ### 4.7 异常统一处理
@@ -1315,7 +1247,6 @@ public class LoginConfig implements WebMvcConfigurer {
 public class MyControllerAdvice {
 
 }
-1234
 ```
 
 #### ②定义[异常处理](https://so.csdn.net/so/search?q=异常处理&spm=1001.2101.3001.7020)方法
@@ -1336,7 +1267,6 @@ public class MyControllerAdvice {
         return result;
     }
 }
-12345678910111213
 ```
 
 ### 4.8 获取web原生对象
@@ -1355,8 +1285,6 @@ public class TestController {
         return new ResponseResult(200,"成功");
     }
 }
-
-12345678910
 ```
 
 ### 4.9 自定义参数解析
@@ -1373,7 +1301,6 @@ public class TestController {
 public @interface CurrentUserId {
 
 }
-12345
 ```
 
 ②创建类实现HandlerMethodArgumentResolver接口并重写其中的方法
@@ -1404,7 +1331,6 @@ public class UserIdArgumentResolver implements HandlerMethodArgumentResolver {
         return null;
     }
 }
-1234567891011121314151617181920212223
 ```
 
 ③配置参数解析器
@@ -1421,7 +1347,6 @@ public class ArgumentResolverConfig implements WebMvcConfigurer {
         resolvers.add(userIdArgumentResolver);
     }
 }
-1234567891011
 ```
 
 ④测试
@@ -1446,7 +1371,6 @@ public class UserController {
         return new ResponseResult(200,users);
     }
 }
-1234567891011121314151617
 ```
 
 ### 4.10 声明式事务
@@ -1478,7 +1402,6 @@ public class UserServiceImpl implements UserServcie {
 
 
 }
-123456789101112131415161718192021222324
 ```
 
 ### 4.11 AOP
@@ -1491,7 +1414,6 @@ public class UserServiceImpl implements UserServcie {
 spring:
   aop:
     auto: false
-123
 ```
 
 #### 4.11.1 使用步骤
@@ -1503,7 +1425,6 @@ spring:
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-1234
 ```
 
 ②自定义注解
@@ -1513,8 +1434,6 @@ spring:
 @Retention(RetentionPolicy.RUNTIME)
 public @interface InvokeLog {
 }
-
-12345
 ```
 
 ③定义切面类
@@ -1548,8 +1467,6 @@ public class InvokeLogAspect {
         return proceed;
     }
 }
-
-1234567891011121314151617181920212223242526272829
 ```
 
 ④在需要正确的地方增加对应的注解
@@ -1567,7 +1484,6 @@ public class UserServiceImpl implements UserServcie {
         return userMapper.findAll();
     }
 }
-123456789101112
 ```
 
 #### 4.11.2 切换动态代理
@@ -1586,7 +1502,6 @@ public class WebApplication {
         ConfigurableApplicationContext context = SpringApplication.run(WebApplication.class, args);
     }
 }
-1234567
 ```
 
  如果想生效还需要在配置文件中做如下配置
@@ -1595,7 +1510,6 @@ public class WebApplication {
 spring:
   aop:
     proxy-target-class: false #切换动态代理的方式
-123
 ```
 
 ### 4.12 模板引擎相关-Thymeleaf
@@ -1610,7 +1524,6 @@ spring:
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-12345
 ```
 
 ##### 4.12.1.2定义Controller
@@ -1635,7 +1548,6 @@ public class ThymeleafController {
         return "table-standard";
     }
 }
-1234567891011121314151617
 ```
 
 ##### 4.12.1.3 htmL
@@ -1650,7 +1562,6 @@ public class ThymeleafController {
 <html lang="en" class="no-ie" xmlns:th="http://www.thymeleaf.org">
  .....
  <div class="panel-heading" th:text="${msg}">Kitchen Sink</div>
-123
 ```
 
 如果需要引入静态资源，需要使用如下写法。
@@ -1669,7 +1580,6 @@ public class ThymeleafController {
    <script th:src="@{/vendor/modernizr/modernizr.js}" type="application/javascript"></script>
    <!-- FastClick for mobiles-->
    <script th:src="@{/vendor/fastclick/fastclick.js}" type="application/javascript"></script>
-12345678910111213
 ```
 
 遍历语法：遍历的语法 th:each=“自定义的元素变量名称 : ${集合变量名称}”
@@ -1681,7 +1591,6 @@ public class ThymeleafController {
     <td th:text="${user.age}"></td>
     <td th:text="${user.address}"></td>
 </tr>
-123456
 ```
 
 ## 5.整合Redis
@@ -1694,7 +1603,6 @@ public class ThymeleafController {
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-12345
 ```
 
 ### ②配置Redis地址和端口号
@@ -1704,7 +1612,6 @@ spring:
   redis:
     host: 127.0.0.1 #redis服务器ip地址
     port: 6379  #redis端口号
-1234
 ```
 
 ### ③注入RedisTemplate使用
@@ -1717,7 +1624,6 @@ spring:
     public void testRedis(){
         redisTemplate.opsForValue().set("name","三更");
     }
-1234567
 ```
 
 ## 6.环境切换
@@ -1759,7 +1665,6 @@ debug: true #开启日志
 logging:
   level:
     com.sangeng: debug #设置日志级别
-1234
 ```
 
 ## 8.指标监控
@@ -1775,7 +1680,6 @@ logging:
  	<groupId>org.springframework.boot</groupId>
  	<artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
-1234
 ```
 
 ②访问监控接口
@@ -1791,7 +1695,6 @@ management:
 	web:
       exposure:
         include: "*" #web端暴露所有端点
-123456
 ```
 
 ### 8.2 常用端点
@@ -1817,7 +1720,6 @@ management:
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-server</artifactId>
         </dependency>
-1234
 ```
 
 然后在启动类上加上@EnableAdminServer注解
@@ -1832,7 +1734,6 @@ management:
             <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>2.3.1</version>
         </dependency>
-12345
 ```
 
 然后配置SpringBoot Admin Server的地址

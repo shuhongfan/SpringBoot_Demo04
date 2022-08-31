@@ -1,0 +1,71 @@
+name: shuhongfan
+age: 15
+date: 2005/1/12
+
+
+map:
+  k1: v1
+  k2: v2
+
+student2: { name: lisi, age: 20 }
+
+
+list:
+  - sang
+  - geng
+  - cao
+  - tang
+
+students:
+  - name: zhangsan
+    age: 18
+  - name: lisi
+    age: 20
+  - { name: wangwu, age: 22 }
+
+server:
+  port: ${myPort:8888}
+
+myPort: 80
+
+
+student:
+  lastName: zhang
+  age: 15
+  boss: true
+  birthday: 2015/9/9
+  maps:
+    name: sanggeng
+    age: 11
+  maps2: {name: sanggeng, age: 19}
+  list:
+    - name: 小白
+      age: 10
+    - name: 小红
+      age: 12
+    - {name: 小黑, age: 14 }
+  dog:
+    name: 小狗
+    age: 2
+  arr:
+    - sanggeng
+    - caotang
+  arr2: [sanggeng, caotang]
+  doMap:
+    xb: {name: 小白, age: 10}
+    xh:
+      name: 小红
+      age: 12
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.120.20:3306/sgct?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.shf.sg01springbootquickstart.domain
