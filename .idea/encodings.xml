@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/SpringDI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringIOC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringIOC/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sg-01-SpringBoot-QuickStart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sg-02-SpringBoot-Static/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sg-03-SpringBoot-Web/src/main/java" charset="UTF-8" />

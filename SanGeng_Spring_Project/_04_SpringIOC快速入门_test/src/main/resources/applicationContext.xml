@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.sangeng.dao.impl.StudentDaoImpl" id="studentDao" scope="singleton"></bean>
+
+
+    <bean class="com.sangeng.domain.Dog" id="dog">
+        <property name="name" value="小白"></property>
+        <property name="age" value="6"></property>
+    </bean>
+
+    <bean class="com.sangeng.domain.Student" id="student">
+        <!--
+            name属性用来指定要设置哪个属性
+            value属性用来设置要设置的值
+            ref属性用来给引用类型的属性设置值，可以写上Spring容器中bean的id
+        -->
+        <property name="name" value="东南枝"></property>
+        <property name="age" value="20"></property>
+        <property name="id" value="1"></property>
+        <property name="dog" ref="dog"></property>
+    </bean>
+
+    <!--使用有参构造进行注入-->
+    <bean class="com.sangeng.domain.Student" id="student2" >
+        <constructor-arg name="name" value="自挂东南枝"></constructor-arg>
+        <constructor-arg name="age" value="20"></constructor-arg>
+        <constructor-arg name="id" value="30"></constructor-arg>
+        <constructor-arg name="dog" ref="dog"></constructor-arg>
+    </bean>
+
+</beans>

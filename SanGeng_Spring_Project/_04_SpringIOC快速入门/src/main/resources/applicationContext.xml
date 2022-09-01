@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="classpath:jdbc.xml"></import>
+
+    <bean class="com.sangeng.domain.Student" id="student" init-method="init" destroy-method="close"></bean>
+
+
+    <!--创建实例工厂-->
+    <bean class="com.sangeng.factory.CarFactory" id="carFactory"></bean>
+    <!--使用实例工厂创建Car放入容器-->
+    <!--factory-bean 用来指定使用哪个工厂对象-->
+    <!--factory-method 用来指定使用哪个工厂方法-->
+    <bean factory-bean="carFactory" factory-method="getCar" id="car"></bean>
+
+
+    <!--使用静态工厂创建Car放入容器-->
+    <bean class="com.sangeng.factory.CarStaticFactory" factory-method="getCar" id="car2"></bean>
+</beans>

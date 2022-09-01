@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!--<bean class="com.sangeng.dao.impl.UserDaoImpl1" id="userDao"></bean>-->
+    <bean class="com.sangeng.dao.impl.UserDaoImpl1" id="userDao"></bean>
+</beans>

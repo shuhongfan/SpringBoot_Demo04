@@ -7,15 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="_12_SpringAOP_动态代理" />
+        <module name="_10_SpringAOP_XML配置" />
+        <module name="_08_SpringAOP" />
         <module name="sg-02-SpringBoot-Static" />
+        <module name="_01_无Spring存在问题演示" />
+        <module name="_09_SpringAOP案例" />
+        <module name="_14_Spring声明式事务" />
+        <module name="_05_Spring_DI" />
+        <module name="_04_SpringIOC快速入门_test" />
+        <module name="_06_Spring_DI_test" />
+        <module name="_13_Spring整合" />
+        <module name="_11_SpringAOP_多切面顺序控制" />
+        <module name="_03_简易自制版IOC解决问题" />
+        <module name="_07_Spring注解开发" />
+        <module name="_04_SpringIOC快速入门" />
         <module name="sg-01-SpringBoot-QuickStart" />
+        <module name="_02_简易自制版IOC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sg-01-SpringBoot-QuickStart" target="1.8" />
-      <module name="sg-02-SpringBoot-Static" target="1.8" />
       <module name="sg-03-SpringBoot-Web" target="1.8" />
       <module name="spring-source" target="1.8" />
+      <module name="SpringDI" target="1.8" />
+      <module name="SpringIOC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

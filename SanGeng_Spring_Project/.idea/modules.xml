@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SanGeng_Spring_Project.iml" filepath="$PROJECT_DIR$/.idea/SanGeng_Spring_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_01_无Spring存在问题演示/_01_无Spring存在问题演示.iml" filepath="$PROJECT_DIR$/_01_无Spring存在问题演示/_01_无Spring存在问题演示.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_02_简易自制版IOC/_02_简易自制版IOC.iml" filepath="$PROJECT_DIR$/_02_简易自制版IOC/_02_简易自制版IOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_03_简易自制版IOC解决问题/_03_简易自制版IOC解决问题.iml" filepath="$PROJECT_DIR$/_03_简易自制版IOC解决问题/_03_简易自制版IOC解决问题.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04_SpringIOC快速入门/_04_SpringIOC快速入门.iml" filepath="$PROJECT_DIR$/_04_SpringIOC快速入门/_04_SpringIOC快速入门.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04_SpringIOC快速入门_test/_04_SpringIOC快速入门_test.iml" filepath="$PROJECT_DIR$/_04_SpringIOC快速入门_test/_04_SpringIOC快速入门_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_05_Spring_DI/_05_Spring_DI.iml" filepath="$PROJECT_DIR$/_05_Spring_DI/_05_Spring_DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_06_Spring_DI_test/_06_Spring_DI_test.iml" filepath="$PROJECT_DIR$/_06_Spring_DI_test/_06_Spring_DI_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_07_Spring注解开发/_07_Spring注解开发.iml" filepath="$PROJECT_DIR$/_07_Spring注解开发/_07_Spring注解开发.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_08_SpringAOP/_08_SpringAOP.iml" filepath="$PROJECT_DIR$/_08_SpringAOP/_08_SpringAOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_09_SpringAOP案例/_09_SpringAOP案例.iml" filepath="$PROJECT_DIR$/_09_SpringAOP案例/_09_SpringAOP案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_10_SpringAOP_XML配置/_10_SpringAOP_XML配置.iml" filepath="$PROJECT_DIR$/_10_SpringAOP_XML配置/_10_SpringAOP_XML配置.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_11_SpringAOP_多切面顺序控制/_11_SpringAOP_多切面顺序控制.iml" filepath="$PROJECT_DIR$/_11_SpringAOP_多切面顺序控制/_11_SpringAOP_多切面顺序控制.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_12_SpringAOP_动态代理/_12_SpringAOP_动态代理.iml" filepath="$PROJECT_DIR$/_12_SpringAOP_动态代理/_12_SpringAOP_动态代理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_13_Spring整合/_13_Spring整合.iml" filepath="$PROJECT_DIR$/_13_Spring整合/_13_Spring整合.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_14_Spring声明式事务/_14_Spring声明式事务.iml" filepath="$PROJECT_DIR$/_14_Spring声明式事务/_14_Spring声明式事务.iml" />
+    </modules>
+  </component>
+</project>

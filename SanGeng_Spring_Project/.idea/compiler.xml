@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="_01_无Spring存在问题演示" />
+        <module name="_02_简易自制版IOC" />
+        <module name="_03_简易自制版IOC解决问题" />
+        <module name="_04_SpringIOC快速入门" />
+        <module name="_04_SpringIOC快速入门_test" />
+        <module name="_05_Spring_DI" />
+        <module name="_06_Spring_DI_test" />
+        <module name="_07_Spring注解开发" />
+        <module name="_08_SpringAOP" />
+        <module name="_09_SpringAOP案例" />
+        <module name="_10_SpringAOP_XML配置" />
+        <module name="_11_SpringAOP_多切面顺序控制" />
+        <module name="_12_SpringAOP_动态代理" />
+        <module name="_13_Spring整合" />
+        <module name="_14_Spring声明式事务" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_01_无Spring存在问题演示" target="1.8" />
+      <module name="_02_简易自制版IOC" target="8" />
+      <module name="_03_简易自制版IOC解决问题" target="8" />
+      <module name="_04_SpringIOC快速入门" target="1.5" />
+      <module name="_04_SpringIOC快速入门_test" target="1.5" />
+      <module name="_05_Spring_DI" target="1.5" />
+      <module name="_06_Spring_DI_test" target="1.5" />
+      <module name="_07_Spring注解开发" target="1.5" />
+      <module name="_08_SpringAOP" target="1.5" />
+      <module name="_09_SpringAOP案例" target="1.5" />
+      <module name="_10_SpringAOP_XML配置" target="1.5" />
+      <module name="_10_SpringAOP_XML配置_test" target="1.5" />
+      <module name="_11_SpringAOP_多切面顺序控制" target="1.5" />
+      <module name="_12_SpringAOP_动态代理" target="8" />
+      <module name="_13_Spring整合" target="1.5" />
+      <module name="_14_Spring声明式事务" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

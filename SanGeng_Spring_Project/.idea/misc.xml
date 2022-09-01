@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/_01_无Spring存在问题演示/pom.xml" />
+        <option value="$PROJECT_DIR$/_02_简易自制版IOC/pom.xml" />
+        <option value="$PROJECT_DIR$/_03_简易自制版IOC解决问题/pom.xml" />
+        <option value="$PROJECT_DIR$/_04_SpringIOC快速入门/pom.xml" />
+        <option value="$PROJECT_DIR$/_05_Spring_DI/pom.xml" />
+        <option value="$PROJECT_DIR$/_06_Spring_DI_test/pom.xml" />
+        <option value="$PROJECT_DIR$/_04_SpringIOC快速入门_test/pom.xml" />
+        <option value="$PROJECT_DIR$/_07_Spring注解开发/pom.xml" />
+        <option value="$PROJECT_DIR$/_08_SpringAOP/pom.xml" />
+        <option value="$PROJECT_DIR$/_09_SpringAOP案例/pom.xml" />
+        <option value="$PROJECT_DIR$/_10_SpringAOP_XML配置_test/pom.xml" />
+        <option value="$PROJECT_DIR$/_10_SpringAOP_XML配置/pom.xml" />
+        <option value="$PROJECT_DIR$/_11_SpringAOP_多切面顺序控制/pom.xml" />
+        <option value="$PROJECT_DIR$/_12_SpringAOP_动态代理/pom.xml" />
+        <option value="$PROJECT_DIR$/_13_Spring整合/pom.xml" />
+        <option value="$PROJECT_DIR$/_14_Spring声明式事务/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

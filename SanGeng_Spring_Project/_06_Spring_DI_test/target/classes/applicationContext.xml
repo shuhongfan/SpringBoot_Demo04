@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.sangeng.domain.Phone" id="phone">
+        <property name="price" value="#{3888+1111}"></property>
+        <property name="name" value="黑米"></property>
+        <property name="password" value="123"></property>
+        <property name="path" value="qqqq"></property>
+    </bean>
+    
+    <bean class="com.sangeng.domain.User" id="user">
+        <property name="age" value="10"></property>
+        <property name="name" value="大队长"></property>
+        <property name="phone" value="#{phone}"></property>
+        <property name="list">
+            <list>
+                <value>三更</value>
+                <value>西施</value>
+            </list>
+        </property>
+
+        <property name="phones">
+            <list>
+                <ref bean="phone"></ref>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>setEle1</value>
+                <value>setEle2</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="k1" value-ref="phone"></entry>
+                <entry key="k2" value-ref="phone"></entry>
+            </map>
+        </property>
+
+        <property name="arr">
+            <array>
+                <value>10</value>
+                <value>11</value>
+            </array>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="k1">v1</prop>
+                <prop key="k2">v2</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
